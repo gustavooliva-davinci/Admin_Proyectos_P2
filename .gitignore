@@ -1,14 +1,10 @@
-"# Python
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.env
 venv/
 env/
-
-# Base de datos
-*.db
-*.sqlite
 
 # IDE
 .vscode/
@@ -22,4 +18,3 @@ Thumbs.db
 
 # Node (por si se usa en el futuro)
 node_modules/
-"
