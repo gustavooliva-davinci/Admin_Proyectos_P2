@@ -1,0 +1,466 @@
+<!-- frontend/index.html - Parte 1: Head -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PET Center | Servicios Premium para Mascotas</title>
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración de Tailwind: Paleta Premium (Champagne, Gold, Black) -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'champagne': '#F7E7CE',
+                        'champagne-light': '#FCF5E8',
+                        'gold': '#D4AF37',
+                        'gold-dark': '#B4941F',
+                        'black-premium': '#1A1A1A',
+                        'gray-soft': '#F5F5F7',
+                    },
+                    fontFamily: {
+                        'serif': ['"Playfair Display"', 'serif'],
+                        'sans': ['"Lato"', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'glass': '0 8px 32px 0 rgba(31, 38, 135, 0.07)',
+                        'glow': '0 0 15px rgba(212, 175, 55, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Estilos Personalizados Base -->
+    <style>
+        /* Efecto Glassmorphism base */
+        .glass {
+            background: rgba(255, 255, 255, 0.75);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        /* Ocultar scrollbar en carruseles pero permitir scroll */
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        /* Transiciones suaves */
+        .transition-all-custom {
+            transition: all 0.3s ease-in-out;
+        }
+    </style>
+</head>
+<body class="bg-gray-soft font-sans text-black-premium antialiased">
+
+    <!-- Header Glassmorphism -->
+    <header class="fixed w-full z-50 top-0 transition-all duration-300" id="main-header">
+        <div class="glass shadow-glass">
+            <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+                <!-- Logo con nueva tipografía cursiva premium -->
+                <div class="flex items-center gap-2">
+                    <i class="fa-solid fa-paw text-gold text-2xl"></i>
+                    <h1 class="font-[Great_Vibes] text-4xl font-bold text-black-premium leading-none">
+                        PET Center
+                    </h1>
+                </div>
+
+                <!-- Navegación Desktop -->
+                <nav class="hidden md:flex gap-8 items-center">
+                    <a href="#" class="text-black-premium hover:text-gold transition-colors font-medium">Inicio</a>
+                    <a href="#categorias" class="text-black-premium hover:text-gold transition-colors font-medium">Categorías</a>
+                    <a href="#empresas" class="text-black-premium hover:text-gold transition-colors font-medium">Empresas</a>
+                    <button class="bg-gold hover:bg-gold-dark text-white px-6 py-2 rounded-full shadow-glow transition-all-custom text-sm font-bold">
+                        Ingresar
+                    </button>
+                </nav>
+
+                <!-- Botón Menú Mobile -->
+                <button class="md:hidden text-black-premium text-2xl" onclick="toggleMenu()">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <div class="h-16"></div>
+
+    <!-- Hero Section / Intro -->
+    <section class="relative bg-gradient-to-b from-champagne-light to-white pt-16 pb-24 overflow-hidden">
+        <!-- Elementos decorativos de fondo -->
+        <div class="absolute top-20 right-0 w-96 h-96 bg-gold opacity-10 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 w-72 h-72 bg-champagne opacity-30 rounded-full blur-3xl"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="max-w-3xl mx-auto text-center">
+                <span class="text-gold font-bold tracking-widest uppercase text-xs mb-4 block">Calidad Superior</span>
+                <h2 class="font-serif text-4xl md:text-5xl font-bold text-black-premium mb-6 leading-tight">
+                    La mejor opción para <br>
+                    <span class="text-gold italic">tu amigo peludo</span>
+                </h2>
+                <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                    En PET Center unimos a las mejores empresas de servicios y productos para mascotas con dueños exigentes. 
+                    Encuentra veterinarios, peluquerías y tiendas de confianza en un solo lugar.
+                </p>
+                <div class="flex flex-col md:flex-row gap-4 justify-center">
+                    <!-- Botón cambiado a Iniciar Sesión -->
+                    <button class="bg-black-premium text-white px-8 py-4 rounded-full font-bold shadow-lg hover:bg-gray-800 transition-all-custom transform hover:-translate-y-1 flex items-center justify-center gap-2">
+                        <i class="fa-solid fa-user"></i>
+                        Iniciar Sesión / Crear Usuario
+                    </button>
+                    <a href="#categorias" class="border-2 border-black-premium text-black-premium px-8 py-4 rounded-full font-bold hover:bg-black-premium hover:text-white transition-all-custom flex items-center justify-center">
+                        Ver Servicios
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- frontend/index.html - Parte 3: Main (Promos y Categorías) Corregido -->
+
+    <!-- Sección de Promociones Destacadas -->
+    <!-- Reducido py-20 a py-12 para menor espacio vertical -->
+    <section id="promociones" class="py-12 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="flex justify-between items-end mb-8">
+                <div>
+                    <h3 class="font-serif text-2xl font-bold text-black-premium mb-1">Ofertas Exclusivas</h3>
+                    <p class="text-gray-500 text-sm">Descuentos especiales de nuestros socios</p>
+                </div>
+                <div class="flex gap-2">
+                    <button onclick="scrollPromos(-1)" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-champagne transition-colors text-sm">
+                        <i class="fa-solid fa-chevron-left text-black-premium"></i>
+                    </button>
+                    <button onclick="scrollPromos(1)" class="w-8 h-8 rounded-full border border-gray-300 flex items-center justify-center hover:bg-champagne transition-colors text-sm">
+                        <i class="fa-solid fa-chevron-right text-black-premium"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Contenedor del Carrusel -->
+            <div id="promos-carousel" class="flex gap-4 overflow-x-auto hide-scrollbar scroll-smooth pb-6">
+                
+                <!-- Promo 1 -->
+                <div class="min-w-[280px] md:min-w-[320px] h-[320px] relative rounded-xl overflow-hidden shadow-md group cursor-pointer flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1548199973-03cce0bbc87b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Baño y Corte" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 text-white w-full">
+                        <span class="bg-gold text-black-premium text-[10px] font-bold px-2 py-0.5 rounded-full uppercase mb-1 inline-block">-20% OFF</span>
+                        <h4 class="font-serif text-lg font-bold mb-0.5">Peluquería Golden Paws</h4>
+                        <p class="text-xs text-gray-300 mb-2">Baño + Corte de raza</p>
+                        <button class="text-xs font-bold underline text-gold hover:text-white">Reservar &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Promo 2 -->
+                <div class="min-w-[280px] md:min-w-[320px] h-[320px] relative rounded-xl overflow-hidden shadow-md group cursor-pointer flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Veterinaria" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 text-white w-full">
+                        <span class="bg-white text-black-premium text-[10px] font-bold px-2 py-0.5 rounded-full uppercase mb-1 inline-block">NUEVO</span>
+                        <h4 class="font-serif text-lg font-bold mb-0.5">Clinica Vet Central</h4>
+                        <p class="text-xs text-gray-300 mb-2">Chequeo General + Vacunación</p>
+                        <button class="text-xs font-bold underline text-gold hover:text-white">Reservar &rarr;</button>
+                    </div>
+                </div>
+
+                <!-- Promo 3 -->
+                <div class="min-w-[280px] md:min-w-[320px] h-[320px] relative rounded-xl overflow-hidden shadow-md group cursor-pointer flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1576201836106-db1758fd1397?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Accesorios" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 text-white w-full">
+                        <span class="bg-gold text-black-premium text-[10px] font-bold px-2 py-0.5 rounded-full uppercase mb-1 inline-block">PROMO 2X1</span>
+                        <h4 class="font-serif text-lg font-bold mb-0.5">PetShop Deluxe</h4>
+                        <p class="text-xs text-gray-300 mb-2">Collares y Correas Premium</p>
+                        <button class="text-xs font-bold underline text-gold hover:text-white">Ver Productos &rarr;</button>
+                    </div>
+                </div>
+                
+                 <!-- Promo 4 (Repetición para demostración de scroll) -->
+                 <div class="min-w-[280px] md:min-w-[320px] h-[320px] relative rounded-xl overflow-hidden shadow-md group cursor-pointer flex-shrink-0">
+                    <img src="https://images.unsplash.com/photo-1623366302587-b38b1ddaefd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Hotels" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/90 via-black/40 to-transparent"></div>
+                    <div class="absolute bottom-0 left-0 p-5 text-white w-full">
+                        <span class="bg-white text-black-premium text-[10px] font-bold px-2 py-0.5 rounded-full uppercase mb-1 inline-block">VIP</span>
+                        <h4 class="font-serif text-lg font-bold mb-0.5">Hotel Canino Royal</h4>
+                        <p class="text-xs text-gray-300 mb-2">Estadia de lujo 24hs</p>
+                        <button class="text-xs font-bold underline text-gold hover:text-white">Reservar &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Categorías (Filtros) -->
+    <section id="categorias" class="py-6 bg-white border-b border-gray-100">
+        <div class="container mx-auto px-6">
+            <!-- Contenedor Flex para que estén en la misma línea y ocupen el ancho necesario -->
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4">
+                
+                <!-- Filtro: Todos -->
+                <button onclick="filterByCategory('todos')" class="filter-btn active flex items-center gap-2 bg-black-premium text-white px-4 py-2 rounded-full text-xs font-bold shadow-md hover:shadow-lg transition-all transform hover:-translate-y-0.5">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <span>Todos</span>
+                </button>
+
+                <!-- Filtro: Veterinaria -->
+                <button onclick="filterByCategory('veterinaria')" class="filter-btn flex items-center gap-2 bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-xs font-bold hover:border-green-500 hover:text-green-600 transition-all transform hover:-translate-y-0.5 shadow-sm">
+                    <i class="fa-solid fa-stethoscope text-sm"></i>
+                    <span>Veterinaria</span>
+                </button>
+
+                <!-- Filtro: Servicios -->
+                <button onclick="filterByCategory('servicios')" class="filter-btn flex items-center gap-2 bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-xs font-bold hover:border-blue-500 hover:text-blue-600 transition-all transform hover:-translate-y-0.5 shadow-sm">
+                    <i class="fa-solid fa-scissors text-sm"></i>
+                    <span>Servicios</span>
+                </button>
+
+                <!-- Filtro: Productos -->
+                <button onclick="filterByCategory('productos')" class="filter-btn flex items-center gap-2 bg-white border border-gray-200 text-gray-600 px-4 py-2 rounded-full text-xs font-bold hover:border-red-500 hover:text-red-600 transition-all transform hover:-translate-y-0.5 shadow-sm">
+                    <i class="fa-solid fa-bone text-sm"></i>
+                    <span>Productos</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Empresas Destacadas -->
+    <section id="empresas" class="py-12 bg-white relative">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-10">
+                <span class="text-gold font-bold uppercase tracking-wider text-xs mb-2 block">Nuestros Socios Preferidos</span>
+                <h3 class="font-serif text-3xl font-bold text-black-premium mb-3">Servicios Destacados</h3>
+                <div class="w-16 h-1 bg-gold mx-auto"></div>
+            </div>
+
+            <!-- Grid de Tarjetas (Responsive: 1 col móvil, 2 tablet, 3 desktop) -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                
+                <!-- Card 1: Veterinaria -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1623366302587-b38b1ddaefd9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Veterinaria" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-white/90 backdrop-blur-sm px-2 py-1 rounded-lg shadow-sm">
+                            <span class="text-green-600 font-bold text-xs flex items-center gap-1">
+                                <i class="fa-solid fa-check-circle"></i> Verificado
+                            </span>
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-serif text-lg font-bold text-black-premium">Clínica Patitas</h4>
+                            <div class="flex text-gold text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star-half-stroke"></i>
+                                <span class="text-gray-400 ml-1">(4.8)</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2 flex-1">Atención médica 24hs, cirugías especializadas y laboratorio clínico.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Urgencias</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Vacunación</span>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+                            <a href="#" class="text-xs font-bold text-black-premium hover:text-gold transition-colors flex items-center gap-1">
+                                Ver perfil <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">En Av. Libertador</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Peluquería -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1516734212186-a967f81ad0d7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Peluquería" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        <div class="absolute top-3 right-3 bg-gold text-black-premium px-2 py-1 rounded-lg shadow-sm font-bold text-xs">
+                            OFERTA
+                        </div>
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-serif text-lg font-bold text-black-premium">Pet Style Studio</h4>
+                            <div class="flex text-gold text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <span class="text-gray-400 ml-1">(5.0)</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2 flex-1">Estilismo profesional, banado premium y corte de raza según estándar.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Corte</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Spa</span>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+                            <a href="#" class="text-xs font-bold text-black-premium hover:text-gold transition-colors flex items-center gap-1">
+                                Reservar ahora <i class="fa-solid fa-calendar-check"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">En Palermo</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3: PetShop -->
+                <div class="bg-white rounded-2xl shadow-md hover:shadow-xl transition-all duration-300 border border-gray-100 overflow-hidden group flex flex-col">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1583337130417-3346a1be7dee?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="PetShop" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                    </div>
+                    <div class="p-5 flex-1 flex flex-col">
+                        <div class="flex justify-between items-start mb-2">
+                            <h4 class="font-serif text-lg font-bold text-black-premium">Mundo Animal</h4>
+                            <div class="flex text-gold text-xs">
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-solid fa-star"></i>
+                                <i class="fa-regular fa-star"></i>
+                                <span class="text-gray-400 ml-1">(4.2)</span>
+                            </div>
+                        </div>
+                        <p class="text-gray-500 text-sm mb-4 line-clamp-2 flex-1">Alimentos premium, juguetes interactivos y accesorios personalizados.</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Alimento</span>
+                            <span class="text-xs bg-gray-100 text-gray-600 px-2 py-1 rounded">Juguetes</span>
+                        </div>
+
+                        <div class="flex items-center justify-between mt-auto pt-3 border-t border-gray-100">
+                            <a href="#" class="text-xs font-bold text-black-premium hover:text-gold transition-colors flex items-center gap-1">
+                                Ver tienda <i class="fa-solid fa-bag-shopping"></i>
+                            </a>
+                            <span class="text-xs text-gray-400">Envío a domicilio</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Botón Ver Todos -->
+            <div class="text-center mt-10">
+                <a href="#empresas" class="inline-flex items-center justify-center border-2 border-black-premium text-black-premium px-8 py-3 rounded-full font-bold hover:bg-black-premium hover:text-white transition-all-custom">
+                    Ver el total de empresas / servicios
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Testimonios -->
+    <section id="testimonios" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-12">
+                <h3 class="font-serif text-2xl font-bold text-black-premium mb-2">Lo que dicen nuestros usuarios</h3>
+                <p class="text-gray-500 text-sm">Experiencias reales de la comunidad PetLove</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Testimonio 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-gold text-xs mb-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"Encontré a un veterinario de emergencia en minutos cuando mi perro se enfermó de noche. El servicio fue increíblemente rápido."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">ML</div>
+                        <div>
+                            <p class="text-sm font-bold text-black-premium">María López</p>
+                            <p class="text-xs text-gray-400">Propia de Golden Retriever</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-gold text-xs mb-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"La app facilita muchísimo agendar la peluquería. Mi bulldog siempre sale feliz y la limpieza de los locales es impecable."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">JP</div>
+                        <div>
+                            <p class="text-sm font-bold text-black-premium">Juan Pérez</p>
+                            <p class="text-xs text-gray-400">Propio de Bulldog Francés</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonio 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm border border-gray-100">
+                    <div class="flex text-gold text-xs mb-3">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="text-gray-600 text-sm italic mb-4">"Excelente catálogo de alimentos premium. Los descuentos de los socios valen la pena totalmente."</p>
+                    <div class="flex items-center gap-3">
+                        <div class="w-8 h-8 bg-gray-200 rounded-full flex items-center justify-center text-xs font-bold text-gray-600">CR</div>
+                        <div>
+                            <p class="text-sm font-bold text-black-premium">Carla Ruiz</p>
+                            <p class="text-xs text-gray-400">Propia de Gata Siamesa</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Newsletter / CTA Final -->
+    <section id="newsletter" class="py-16 bg-black-premium text-white relative overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+             <!-- Patrón de fondo sutil -->
+             <svg width="100%" height="100%">
+                <pattern id="paw-ctx" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
+                    <circle cx="20" cy="20" r="2" fill="white"/>
+                </pattern>
+                <rect x="0" y="0" width="100%" height="100%" fill="url(#paw-ctx)" />
+            </svg>
+        </div>
+        
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            <h2 class="font-serif text-2xl md:text-3xl font-bold mb-4">Únete al club más exclusivo</h2>
+            <p class="text-gray-300 text-sm mb-8 max-w-lg mx-auto">Recibe ofertas exclusivas, tips de cuidado y novedades de nuestros socios premium directamente en tu correo.</p>
+            
+            <form class="flex flex-col sm:flex-row justify-center gap-3 max-w-md mx-auto">
+                <input type="email" placeholder="tu@email.com" class="px-4 py-3 rounded-lg text-black-premium focus:outline-none focus:ring-2 focus:ring-gold w-full text-sm">
+                <button type="submit" class="bg-gold text-black-premium font-bold px-6 py-3 rounded-lg hover:bg-white transition-colors text-sm whitespace-nowrap">
+                    Suscribirme
+                </button>
+            </form>
+            <p class="text-gray-500 text-xs mt-4">Sin spam. Cancela cuando quieras.</p>
+        </div>
+    </section>
+
+    <!-- ... Parte 6 continúa abajo (Footer) ... -->

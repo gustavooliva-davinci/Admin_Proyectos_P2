@@ -1,0 +1,25 @@
+"# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.env
+venv/
+env/
+
+# Base de datos
+*.db
+*.sqlite
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Node (por si se usa en el futuro)
+node_modules/
+"
