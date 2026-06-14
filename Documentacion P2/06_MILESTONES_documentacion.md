@@ -32,7 +32,8 @@ Los milestones fueron definidos considerando:
 
 Con el objetivo de organizar el desarrollo de PET Center en etapas claramente definidas, se establecieron tres milestones principales alineados con la planificación de sprints y los objetivos del proyecto.
 
-Cada Milestone representa un conjunto de funcionalidades y entregables que permiten alcanzar un resultado concreto y verificable dentro del ciclo de vida del proyecto. La finalización de cada hito constituye un punto de control que facilita el seguimiento del avance, la validación de requerimientos y la gestión de riesgos.
+Cada Milestone representa un conjunto de funcionalidades y entregables que permiten alcanzar un resultado concreto y verificable dentro del ciclo de vida del proyecto. 
+La finalización de cada hito constituye un punto de control que facilita el seguimiento del avance, la validación de requerimientos y la gestión de riesgos.
 
 Los milestones fueron definidos considerando:
 
@@ -107,6 +108,7 @@ Se definieron los siguientes milestones:
 - M3 — Plataforma Completa
 
 Cada milestone contiene un conjunto de Issues asociados a Historias de Usuario y Requerimientos No Funcionales, permitiendo mantener la trazabilidad entre la planificación, el Product Backlog y los entregables definidos para cada etapa del proyecto.
+
 ---
 
 # 5. Control de Versiones
