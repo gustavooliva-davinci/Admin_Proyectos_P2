@@ -40,12 +40,12 @@ Trabajaremos en **sprints de 2 semanas** de duración. Esta decisión se basa en
 - **Hitos académicos:** Cada 2 semanas podemos presentar avances concretos.
 - **Capacidad del equipo:** 2 personas pueden completar funcionalidades significativas en 2 semanas sin agotarse.
 
-| Sprint | Semanas | Objetivo |
-|--------|---------|----------|
-| Sprint 1 | 1 y 2 | Análisis de requisitos, definición de arquitectura, configuración del entorno |
-| Sprint 2 | 3 y 4 | Desarrollo del frontend con datos mock, registro y autenticación |
-| Sprint 3 | 5 y 6 | Desarrollo del backend, API REST, base de datos |
-| Sprint 4 | 7 y 8 | Integración, pruebas, despliegue y documentación final |
+| Sprint | Semanas | Tareas incluidas |
+|--------|---------|------------------|
+| Sprint 1 | 1 y 2 | T01 a T07: Objetivo SMART, stakeholders, metodología ágil, requerimientos, arquitectura, entorno de desarrollo, tablero Trello |
+| Sprint 2 | 3 y 4 | T08 a T17: Registro y autenticación, perfiles de cliente y proveedor, búsqueda por categorías, vista de proveedor, valoraciones, promociones |
+| Sprint 3 | 5 y 6 | T18 a T29: Registro de mascotas, edición de perfil, filtro por ubicación, reserva de turnos, disponibilidad, cancelación, gestión de reservas del proveedor, calificaciones, pruebas de rendimiento y seguridad |
+| Sprint 4 | 7 y 8 | T30 a T40: Panel de administración, gestión de usuarios, estadísticas, pruebas de disponibilidad, usabilidad y compatibilidad, integración frontend-backend, pruebas integrales, corrección de errores, documentación final y despliegue |
 
 ### 2.3 Tablero Kanban
 
@@ -99,3 +99,4 @@ Usaremos GitHub Projects como tablero digital, ya que está integrado con nuestr
 | Versión | Fecha | Cambios realizados | Autor |
 |---------|-------|--------------------|-------|
 | 1.0.0 | 13-06-2026 | Creación inicial del documento con definición de Scrumban y justificación | Equipo PET Center |
+| 1.1.0 | 13-06-2026 | Actualización de la sección 2.2 con tareas concretas de cada sprint según el Product Backlog y el tablero Trello | Equipo PET Center |

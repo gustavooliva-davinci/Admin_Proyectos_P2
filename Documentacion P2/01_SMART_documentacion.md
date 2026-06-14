@@ -82,6 +82,7 @@ Llevar un registro de versiones nos permite saber qué cambió, cuándo y por qu
 | Versión | Fecha | Cambios realizados | Autor |
 |---------|-------|--------------------|-------|
 | 1.0.0 | 12-06-2026 | Creación inicial del documento con objetivo SMART | Equipo PET Center |
+| 1.1.0 | 12-06-2026 | Actualización de métricas y formato | Equipo PET Center |
 
 ---
 
