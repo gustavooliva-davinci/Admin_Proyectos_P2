@@ -96,6 +96,17 @@ La siguiente tabla resume los principales hitos definidos para PET Center:
 | M2 — Núcleo Funcional    | Fin semana 6 | Gestión de mascotas, reservas, disponibilidad y valoraciones        | El cliente puede reservar, cancelar y calificar servicios       |
 | M3 — Plataforma Completa | Fin semana 8 | Administración, pruebas, integración y despliegue                   | La plataforma se encuentra completamente operativa y validada   |
 
+## 4.1 Gestión de Milestones en GitHub
+
+Además del tablero de seguimiento en Trello, el proyecto utiliza GitHub Milestones para organizar las Historias de Usuario según los principales hitos del proyecto.
+
+Se definieron los siguientes milestones:
+
+- M1 — Base del Proyecto
+- M2 — Núcleo Funcional
+- M3 — Plataforma Completa
+
+Cada milestone contiene un conjunto de Issues asociados a Historias de Usuario y Requerimientos No Funcionales, permitiendo mantener la trazabilidad entre la planificación, el Product Backlog y los entregables definidos para cada etapa del proyecto.
 ---
 
 # 5. Control de Versiones
@@ -104,7 +115,7 @@ La siguiente tabla resume los principales hitos definidos para PET Center:
 | ------- | ---------- | ---------------------------------------------------------------------------------------------------------------- | ----------------- |
 | 1.0.0   | 13-06-2026 | Creación inicial del documento con definición de milestones y asignación de funcionalidades                      | Equipo PET Center |
 | 1.1.0   | 14-06-2026 | Reestructuración del documento, mejora de redacción y alineación con la planificación y seguimiento del proyecto | Equipo PET Center |
-
+| 1.2.0   | 14-06-2026 | Incorporación de la gestión de Milestones en GitHub y vinculación con Historias de Usuario                       | Equipo PET Center |
 ---
 
 *Documento elaborado para la materia Administración de Proyectos.*
