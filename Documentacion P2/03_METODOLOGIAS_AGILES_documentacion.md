@@ -92,6 +92,32 @@ Subconjunto del Product Backlog que seleccionamos para cada sprint. Se represent
 
 Usaremos GitHub Projects como tablero digital, ya que está integrado con nuestro repositorio y no requiere herramientas adicionales.
 
+### 3.4 Ajuste de la Metodología de Trabajo
+**Situación detectada**
+
+Durante el Sprint 3, el equipo observó que las funcionalidades relacionadas con la gestión de reservas (HU-13, HU-14 y HU-16) presentaban una complejidad mayor a la estimada inicialmente debido a las dependencias entre módulos y la necesidad de coordinar distintas funcionalidades del sistema.
+
+**Riesgo identificado**
+
+La existencia de varias tareas simultáneamente en estado "En Progreso" dificultaba la finalización de historias de usuario completas dentro del sprint, aumentando el riesgo de retrasos y generando trabajo parcialmente terminado.
+
+**Ajuste metodológico aplicado**
+
+Como medida preventiva, el equipo decidió priorizar la finalización de tareas antes de iniciar nuevas actividades, limitando temporalmente la cantidad de tareas simultáneas en desarrollo durante el Sprint 3.
+
+Asimismo, se incorporó una reunión adicional de sincronización semanal con el objetivo de identificar bloqueos y dependencias de manera temprana.
+
+**Beneficios esperados**
+- Mayor foco en las funcionalidades críticas.
+- Reducción de tareas parcialmente completadas.
+- Mejor seguimiento del avance real del sprint.
+- Disminución del riesgo de retrasos.
+- Mejor coordinación entre los integrantes del equipo.
+
+**Resultado esperado**
+
+La adaptación propuesta permite mantener los principios ágiles de mejora continua y flexibilidad, ajustando el proceso de trabajo para responder de manera efectiva a las necesidades del proyecto sin afectar los objetivos definidos para cada sprint.
+
 ---
 
 ## 4. Control de Versiones
@@ -100,3 +126,4 @@ Usaremos GitHub Projects como tablero digital, ya que está integrado con nuestr
 |---------|-------|--------------------|-------|
 | 1.0.0 | 13-06-2026 | Creación inicial del documento con definición de Scrumban y justificación | Equipo PET Center |
 | 1.1.0 | 13-06-2026 | Actualización de la sección 2.2 con tareas concretas de cada sprint según el Product Backlog y el tablero Trello | Equipo PET Center |
+| 1.2.0 | 14-06-2026 | Incorporación de la sección 3.4 Ajuste de la Metodología de Trabajo para mejorar el seguimiento y control de tareas durante el Sprint 3 | Equipo PET Center |
