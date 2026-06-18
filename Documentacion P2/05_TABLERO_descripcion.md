@@ -119,6 +119,17 @@ Se utilizarán las siguientes etiquetas de color en Trello para identificar la p
 | 🟢 Baja | Verde | Deseable. Se implementa si el tiempo lo permite. | 4 |
 
 ---
+### 3.1 Etiquetas de Milestones
+
+Con el objetivo de facilitar la trazabilidad entre Trello y GitHub, se incorporaron etiquetas visuales (Color celeste Idetificadad graficamente como 'Milestone') para identificar las Historias de Usuario asociadas a cada Milestone del proyecto.
+
+* Milestone 1 (M1) — Base del Proyecto
+* Milestone 2 (M2) — Núcleo Funcional
+* Milestone 3 (M3) — Plataforma Completa
+
+Estas etiquetas permiten identificar rápidamente en el tablero las funcionalidades que forman parte de cada hito definido en GitHub, mejorando el seguimiento y control del avance del proyecto.
+
+---
 
 ## 4. Enlace del Tablero
 
@@ -133,4 +144,5 @@ Se utilizarán las siguientes etiquetas de color en Trello para identificar la p
 |---------|------------|--------------------|-------|
 | 1.0.0   | 13-06-2026 | Creación inicial del documento con descripción completa del tablero Trello | Equipo PET Center |
 | 1.1.0   | 18-06-2026 | Incorporación del enlace público del tablero |Equipo PET Center|
+| 1.2.0   | 18-06-2026 | Incorporación de etiquetas de Milestones y descripción de la trazabilidad entre Trello y GitHub | Equipo PET Center
 
