@@ -113,7 +113,7 @@ A continuación, se detalla cada tarjeta con su título, descripción, miembros 
 Se utilizarán las siguientes etiquetas de color en Trello para identificar la prioridad de cada tarjeta:
 
 | Etiqueta | Color | Significado | Cantidad de tarjetas |
-|----------|-------|-------------|---------------------|
+|----------|-------|-------------|----------------------|
 | 🔴 Alta | Rojo | Imprescindible para el MVP. Sin esto, el proyecto no cumple los requisitos mínimos. | 22 |
 | 🟡 Media | Amarillo | Importante pero no bloqueante. Mejora la experiencia del usuario. | 14 |
 | 🟢 Baja | Verde | Deseable. Se implementa si el tiempo lo permite. | 4 |
@@ -122,14 +122,15 @@ Se utilizarán las siguientes etiquetas de color en Trello para identificar la p
 
 ## 4. Enlace del Tablero
 
-> **Enlace público del tablero:** [Pendiente — Completar luego de crear el tablero en Trello]
+> **Enlace público del tablero:**  [ https://trello.com/invite/b/6a2e970877d8772ab68cb8ef/ATTI3de9cf2ddf90cbe5a3d3d5077d95a2a95BF9912A/pet-center ]
 
 
 ---
 
 ## 5. Control de Versiones
 
-| Versión | Fecha | Cambios realizados | Autor |
-|---------|-------|--------------------|-------|
-| 1.0.0 | 13-06-2026 | Creación inicial del documento con descripción completa del tablero Trello | Equipo PET Center |
+| Versión |   Fecha    | Cambios realizados | Autor |
+|---------|------------|--------------------|-------|
+| 1.0.0   | 13-06-2026 | Creación inicial del documento con descripción completa del tablero Trello | Equipo PET Center |
+| 1.1.0   | 18-06-2026 | Incorporación del enlace público del tablero |Equipo PET Center|
 
